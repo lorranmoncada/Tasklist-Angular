@@ -6,7 +6,7 @@
 
 ## 🔖&nbsp; Sobre
 
-O projeto **TaskList** é um To Do Basicamente criado organização de atividades.
+O projeto **TaskList** é um To Do basicamente criado para organizar suas atividades.
 
 ---
 
