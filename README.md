@@ -7,6 +7,7 @@
 ## 🔖&nbsp; Sobre
 
 O projeto **TaskList** é um To Do basicamente criado para organizar suas atividades.
+Url da aplicação: https://angular-app-taask.herokuapp.com
 
 ---
 
