@@ -1,27 +1,41 @@
-# Tasks
+# Indice
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.10.
+- [Sobre](#-sobre)
+- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [Como baixar o projeto](#-como-baixar-o-projeto)
 
-## Development server
+## 🔖&nbsp; Sobre
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+O projeto **TaskList** é um To Do Basicamente criado organização de atividades.
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🚀 Tecnologias utilizadas
 
-## Build
+O projeto foi desenvolvido utilizando as seguintes tecnologias
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+- [Angular](https://angular.io/)
+- [bootstrap](https://getbootstrap.com.br/)
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🗂 Como baixar o projeto
 
-## Running end-to-end tests
+```bash
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+    # Clonar o repositório
+    $ git clone https://github.com/lorranmoncada/Tasklist-Angular.git
 
-## Further help
+    # Entrar no diretório
+    $ cd Tasklist-Angular-main\Tasklist-Angular-main  
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+    # Instalar as dependências
+    $ npm install
+
+    # Iniciar o projeto
+    $ ng serve
+```
+  # Obs a aplicação não possui rota pois so possue um único modulo tasks que se encontra no component raiz do angular app.component
+---
+
+Desenvolvido 😀 por Lorran Mendes 

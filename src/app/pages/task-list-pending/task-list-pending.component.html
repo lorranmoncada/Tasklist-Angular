@@ -4,7 +4,7 @@
       <div class="d-flex align-items-center mb-3">
         <div class="form-group mr-3 mb-0">
           <label class="row justify-content-center">Criar Task</label>
-          <input [(ngModel)]="titulo" class="form-control" id="taskTitulo" placeholder="Título da sua tarefa" />
+          <input maxlength="40" [(ngModel)]="titulo" class="form-control" id="taskTitulo" placeholder="Título da sua tarefa" />
         </div>
         <i data-toggle="tooltip" data-placement="left" title="Criar Task" style="font-size: 25px;margin-top: 2rem;" class="fas fa-plus-circle" (click)="createTask()"></i>
       </div>

@@ -5,6 +5,9 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { TaskListTodo } from '../models/TaskListTodo';
 
+// Criei essa classe base para on inputs referentes as tasks como uma opção, ja que a aplicação so tem um módulo que são as tasks
+// Mas também dei a opção de fazer a chamada de input do componente filho para o pai como exemplo: no método reactiveTask
+
 @Injectable()
 export class BaseService {
 
