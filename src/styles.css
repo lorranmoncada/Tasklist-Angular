@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+[contenteditable]:focus {
+    outline: 0px solid transparent;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    background-color: #f2f2f2;
+}
+i {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+body{
+   font-family: 'Open Sans',serif;
+   font-size: 16px;
+   background-color: #eeeeee;
+}
+
+
+ 

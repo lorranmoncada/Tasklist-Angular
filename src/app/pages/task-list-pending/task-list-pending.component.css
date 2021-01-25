@@ -1,0 +1,8 @@
+.center{
+    justify-content: center;
+}
+
+.action-buttom{
+    display: flex;
+    justify-content: space-around;
+}

@@ -1,0 +1,15 @@
+<div class="row center">
+  <div class="col-sm-10 col-md-5">
+    <div class="app-container d-flex align-items-center justify-content-center flex-column">
+      <div class="d-flex align-items-center mb-3">
+        <div class="form-group mr-3 mb-0">
+          <label class="row justify-content-center">Criar Task</label>
+          <input [(ngModel)]="titulo" class="form-control" id="taskTitulo" placeholder="Título da sua tarefa" />
+        </div>
+        <i data-toggle="tooltip" data-placement="left" title="Criar Task" style="font-size: 25px;margin-top: 2rem;" class="fas fa-plus-circle" (click)="createTask()"></i>
+      </div>
+    </div>
+  </div>
+</div>
+<app-list-task-component (reloadPendingList)="refreshPendingList()" [taskListTodo]=taskListTodo></app-list-task-component>
+<app-alert #alert></app-alert>

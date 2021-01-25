@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BaseService } from './services/base.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+  constructor(private baseService: BaseService) { }
+  activeTab = 'pending';
+
+  notfy(activeTab){
+    this.activeTab = activeTab;
+    this.baseService.emitType(activeTab);
+  }
 }

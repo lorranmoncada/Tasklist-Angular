@@ -1,0 +1,71 @@
+<div class="row justify-content-end mb-3 mr-0">
+  <i data-toggle="tooltip" data-placement="left" title="Atualizar" style="font-size: 25px;" class="fas fa-sync"
+    (click)="refresh()"></i>
+</div>
+<div class="row center">
+  <div class="col-sm-12 col-md-12">
+    <div class="table-responsive tableFixHead">
+      <table class="table table-striped" style="position: relative;">
+        <thead>
+          <tr>
+            <th>Titulo</th>
+            <th>Descrição</th>
+            <th *ngIf="typeStatus !== 'inative'">Status</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of taskListTodo; let id = index">
+
+            <td>
+              <span class="row ml-1" contenteditable="true"
+                (input)="changeValue(item, 'titulo', $event.target.textContent)">{{item.titulo}}</span>
+              <div class="row"> <small class="text-muted col">Criado: {{item.dataCriacao | date:'dd/MM/yyyy'}}</small>
+                <small class="text-muted col">Editado:
+                  {{item.dataEdicao !== null ? (item.dataEdicao | date:'dd/MM/yyyy') : 'Task não editada'}}</small>
+                <small *ngIf="typeStatus == 'inative'" class="text-muted col">Removido: {{item.dataRemocao |
+                  date:'dd/MM/yyyy'}}</small>
+              </div>
+            </td>
+
+            <td>
+              <span class="row" [class.border-desc]="item.descricao == null"
+                [attr.contenteditable]="typeStatus !== 'inative'"
+                (input)="changeValue(item, 'descricao', $event.target.textContent)">{{item.descricao}}</span>
+            </td>
+
+            <td *ngIf="typeStatus !== 'inative'"><strong>{{item.status == 1 ? 'Pendente':'Concluido'}}</strong></td>
+
+            <td *ngIf="typeStatus !== 'inative'; else inative" class="action-buttom">
+
+              <i data-toggle="tooltip" data-placement="left" title="Editar Task" (click)="updateTask(item)"
+                class="fas fa-edit text-info mr-1"></i>
+
+              <i data-toggle="tooltip" data-placement="left" title="Concluir Task" (click)="backOrNextProgress(item)"
+                *ngIf="typeStatus=='pending'; else completed" class="fas fa-check text-success mr-1"></i>
+
+              <!-- else icon para repedenciar task -->
+              <ng-template #completed>
+                <i data-toggle="tooltip" (click)="backOrNextProgress(item)" data-placement="left"
+                  title="Pêndenciar Task" class="fas fa-window-close mr-1 text-warning"></i>
+              </ng-template>
+
+              <i data-toggle="tooltip" data-placement="left" title="Inativar Task" (click)="inactivaterTask(item)"
+                class="fas fa-trash text-danger"></i>
+            </td>
+            <!-- icon reativar task -->
+            <ng-template #inative>
+              <td>
+                <i style="font-size: 25px;color: #a454c5;" data-toggle="tooltip" data-placement="left"
+                  title="Reativar Task" (click)="taskReactive(item)" class="fas fa-angle-double-left"></i>
+              </td>
+            </ng-template>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<app-alert #alert></app-alert>
